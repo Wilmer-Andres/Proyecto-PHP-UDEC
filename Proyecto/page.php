@@ -1,7 +1,7 @@
 <?php 
     require_once ("Includes/simplecms-config.php"); 
     require_once  ("Includes/connectDB.php");
-    include("Includes/header.php"); 
+    ob_start();
 ?>
 
 <div id="main">
@@ -29,7 +29,6 @@
         }
     ?>
 </div>
-</div> <!-- End of outer-wrapper which opens in header.php -->
-<?php 
-    include ("Includes/footer.php");
- ?>
+</div> 
+<?php $contenido = ob_get_clean();?>
+<?php include "Includes/master.php";?>

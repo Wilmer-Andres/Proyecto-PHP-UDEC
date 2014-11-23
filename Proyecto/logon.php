@@ -2,7 +2,7 @@
     require_once ("Includes/session.php");
     require_once ("Includes/simplecms-config.php"); 
     require_once ("Includes/connectDB.php");
-    include ("Includes/header.php");
+    ob_start();
 
     if (isset($_POST['submit']))
     {
@@ -52,5 +52,7 @@
         </fieldset>
     </form>
 </div>
-</div> <!-- End of outer-wrapper which opens in header.php -->
-<?php include ("Includes/footer.php"); ?>
+</div>
+
+<?php $contenido = ob_get_clean();?>
+<?php include "Includes/master.php";?>

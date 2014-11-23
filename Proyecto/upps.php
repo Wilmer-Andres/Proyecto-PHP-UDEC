@@ -1,7 +1,7 @@
     <?php 
         require_once ("Includes/simplecms-config.php"); 
         require_once  ("Includes/connectDB.php");
-        include("Includes/header.php");         
+        ob_start();
      ?>
 
 
@@ -13,6 +13,5 @@
     </div>
 
 </div> 
-<?php 
-    include ("Includes/footer.php");
- ?>
+<?php $contenido = ob_get_clean();?>
+<?php include "Includes/master.php";?>
