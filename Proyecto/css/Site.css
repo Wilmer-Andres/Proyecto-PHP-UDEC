@@ -1,0 +1,14 @@
+﻿.limpiar {
+    clear: both;
+    margin-top: 10px;
+}
+
+footer {
+    border-top-width:3px;
+    border-top-style: solid; 
+    bottom: 0px;
+    margin-top: 10px;
+    padding-top: 10px;
+    position: absolute;
+    width: 100%;
+}
